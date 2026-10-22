@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="id" data-t="pop"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>check-in</title>
+<meta name="theme-color" content="#ff5fa2"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff1d6;--ink:#181818;--mut:#6b6354;--a:#ff5fa2;--b:#3d6bff;--c:#c6f432;--d:#ffb52e;--on:#181818;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html[data-t=tropis]{--bg:#d9f7e8;--a:#ff7a45;--b:#00a6a6;--c:#ffe14d;--d:#ff5fa2;--on:#181818}
+html[data-t=bubble]{--bg:#ffe0f0;--a:#8a5cff;--b:#ff4f9a;--c:#5ff0d0;--d:#ffd84d;--on:#fff}
+html[data-t=ocean]{--bg:#dff0ff;--a:#2f6bff;--b:#ff8a3d;--c:#b8ff5c;--d:#ff5fa2;--on:#fff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;color:var(--ink);font:500 15px 'Space Grotesk',system-ui,sans-serif;background:radial-gradient(circle,rgba(24,24,24,.16) 1.2px,transparent 1.7px) 0 0/15px 15px,var(--bg);min-height:100vh;overflow-x:hidden}
+.bl{position:fixed;border-radius:50%;border:2.5px solid var(--ink);pointer-events:none;z-index:0;animation:dr 9s ease-in-out infinite}
+.b1{width:150px;height:150px;background:var(--a);top:96px;right:-70px}.b2{width:190px;height:190px;background:var(--c);bottom:16%;left:-100px;animation-delay:-3s}.b3{width:110px;height:110px;background:var(--b);bottom:7%;right:-44px;animation-delay:-6s}
+@keyframes dr{50%{transform:translateY(-26px) rotate(12deg)}}
+.mq{position:relative;z-index:1;white-space:nowrap;overflow:hidden;padding:6px 0;font:700 12px 'Space Mono',monospace;letter-spacing:.1em;background:var(--a);color:var(--on);border-bottom:2.5px solid var(--ink)}
+.mq.b{background:var(--c);color:var(--ink)}.mq div{display:inline-block;animation:mq 30s linear infinite}.mq.b div{animation-direction:reverse}
+@keyframes mq{to{transform:translateX(-50%)}}
+main{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:16px 16px 110px}
+h1{display:inline-block;font:400 64px/.95 'Bagel Fat One','Space Grotesk',Impact,sans-serif;letter-spacing:-1px;margin:8px 0 6px;transform:rotate(-2deg);text-shadow:3px 3px 0 var(--a),6px 6px 0 var(--b)}
+.stk{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--c);border:2.5px solid var(--ink);font-size:22px;vertical-align:top;margin-left:8px;text-shadow:none;animation:sp 8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.sub{font:400 12px 'Space Mono',monospace;color:var(--mut)}
+.card{background:#fffdf7;border:2.5px solid var(--ink);border-radius:22px;padding:16px;margin:16px 0;box-shadow:5px 5px 0 var(--ink);animation:pop .45s both}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.96)}}
+#v-home>.card:first-child{background:var(--c)}#sum .card{background:var(--d)}#v-set .card:first-child{background:var(--a);color:var(--on)}#v-set .card:first-child label{color:inherit}
+h3{margin:0 0 6px;font:400 26px 'Bagel Fat One','Space Grotesk',sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.clk{font:400 42px/1 'Bagel Fat One','Space Grotesk',sans-serif;margin-top:2px}
+.step{display:flex;align-items:center;gap:8px;background:#fff;border:2.5px solid var(--ink);border-radius:99px;padding:4px;box-shadow:3px 3px 0 var(--ink)}
+.step button{width:34px;height:34px;border-radius:50%;border:2px solid var(--ink);background:var(--a);color:var(--on);font:700 20px 'Space Grotesk';cursor:pointer}.step button:active{background:var(--d)}
+.step div{font:700 13px 'Space Mono';min-width:64px;text-align:center}
+.btnw{position:relative;width:260px;height:260px;margin:18px auto 6px;display:grid;place-items:center}
+.btnw svg{position:absolute;inset:0;pointer-events:none}.tk{fill:none;stroke:rgba(24,24,24,.14);stroke-width:10}
+.pr{fill:none;stroke:var(--b);stroke-width:10;stroke-linecap:round;stroke-dasharray:754;stroke-dashoffset:754;transition:stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1)}.pr.o{stroke:var(--d)}
+.big{position:relative;z-index:1;width:190px;height:190px;border-radius:50%;border:3px solid var(--ink);background:var(--a);color:var(--on);font:400 26px/1.02 'Bagel Fat One','Space Grotesk',sans-serif;text-transform:uppercase;cursor:pointer;box-shadow:6px 6px 0 var(--ink);animation:br 3s ease-in-out infinite;transition:transform .1s,box-shadow .1s}
+.big:active{transform:translate(5px,5px);box-shadow:1px 1px 0 var(--ink);animation:none}@keyframes br{50%{transform:rotate(-3deg) scale(1.04)}}
+.big small{display:block;font:700 10px 'Space Mono';margin-top:8px;text-transform:none;letter-spacing:0}
+.stat{text-align:center;min-height:22px;margin-bottom:8px;color:var(--ink)}.stat b{background:var(--a);color:var(--on);padding:2px 9px;border-radius:8px;border:2px solid var(--ink)}
+.ghost{display:none;margin:6px auto;padding:10px 18px;border-radius:99px;border:2.5px solid var(--ink);background:#fff;color:var(--ink);font:700 14px 'Space Grotesk';cursor:pointer;align-items:center;gap:6px;box-shadow:3px 3px 0 var(--ink)}.ghost:active{background:var(--c);transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.tag{display:inline-block;font:700 11px 'Space Mono';padding:3px 10px;border-radius:99px;margin:3px 5px 3px 0;background:#fff;border:2px solid var(--ink);color:var(--ink);transform:rotate(-2deg)}
+.ok2{background:var(--c)}.lo{background:var(--d)}.ot{background:var(--a);color:var(--on)}.gr{background:#ece6d6;color:var(--mut)}
+label{display:block;font:700 12px 'Space Mono';color:var(--mut);margin:12px 0 5px}
+input,select{width:100%;background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:14px;padding:11px;font:500 15px 'Space Mono';color-scheme:light}
+input:focus,select:focus{outline:0;box-shadow:3px 3px 0 var(--a)}
+.pbtn{width:100%;padding:14px;border-radius:16px;border:2.5px solid var(--ink);background:var(--a);color:var(--on);font:700 15px 'Space Grotesk';margin:8px 0;cursor:pointer;box-shadow:4px 4px 0 var(--ink)}
+.pbtn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}.pbtn.alt{background:#fff;color:var(--ink)}
+.mini{padding:7px 12px;border-radius:99px;border:2px solid var(--ink);background:#fff;color:var(--ink);font:700 12px 'Space Mono';cursor:pointer}.mini:active{background:var(--c)}
+.sess+.sess{border-top:2.5px dashed var(--ink);margin-top:12px;padding-top:6px}
+.ent{display:flex;gap:11px;padding:10px 0;align-items:center}
+.ent img,.ent .ph{width:64px;height:64px;object-fit:cover;border-radius:14px;flex:none;border:2.5px solid var(--ink)}.ph{display:grid;place-items:center;color:var(--mut);background:var(--d)}
+.ent>div{min-width:0;flex:1}.ent b{font-family:'Space Mono'}.m{font:400 11px 'Space Mono';color:var(--mut);word-break:break-all}
+.chips{display:flex;gap:10px;margin:6px 0}.th{width:36px;height:36px;border-radius:50%;border:2.5px solid var(--ink);cursor:pointer}.th.on{box-shadow:3px 3px 0 var(--ink);transform:scale(1.12)}
+nav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;gap:4px;padding:5px;border-radius:99px;background:#fff;border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);z-index:5}
+nav button{padding:11px 20px;border-radius:99px;border:0;background:none;color:var(--ink);font:700 13px 'Space Grotesk';cursor:pointer}
+nav button.on{background:var(--a);color:var(--on)}
+.view{display:none}.view.on{display:block}
+.ov{position:fixed;inset:0;background:rgba(24,24,24,.5);display:none;align-items:flex-end;z-index:20}.ov.on{display:flex}
+.sheet{width:100%;max-width:480px;margin:0 auto;background:var(--bg);border:3px solid var(--ink);border-bottom:0;border-radius:28px 28px 0 0;padding:20px 16px calc(20px + env(safe-area-inset-bottom,0px));max-height:90vh;overflow:auto;animation:up .3s}
+@keyframes up{from{transform:translateY(100%)}}.pv{width:100%;max-height:200px;object-fit:cover;border-radius:16px;margin:8px 0;border:2.5px solid var(--ink)}
+#cam{position:fixed;inset:0;background:#000;z-index:25;display:none}#cam.on{display:block}#cam video{width:100%;height:100%;object-fit:cover}
+#cam .bar{position:absolute;left:0;right:0;bottom:0;display:flex;gap:10px;justify-content:center;align-items:center;padding:18px 14px calc(22px + env(safe-area-inset-bottom,0px))}
+.shut{width:76px;height:76px;border-radius:50%;border:4px solid #fff;background:var(--a);cursor:pointer}
+.toast{position:fixed;inset:0;display:grid;place-items:center;pointer-events:none;z-index:40;font:400 54px/1.02 'Bagel Fat One','Space Grotesk',sans-serif;text-align:center;white-space:pre-line;opacity:0;color:#fff;-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--a)}
+.toast.go{animation:ts 1.5s}@keyframes ts{0%{opacity:0;transform:scale(.5) rotate(-8deg)}20%{opacity:1;transform:scale(1.08) rotate(-3deg)}80%{opacity:1}100%{opacity:0;transform:scale(1.25)}}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:39;overflow:hidden}#fx i{position:absolute;font-style:normal;font-size:26px;animation:bm 1.2s ease-out forwards;-webkit-text-stroke:1px var(--ink)}
+@keyframes bm{to{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:0}}
+#lb{z-index:30;align-items:center;justify-content:center}#lb img{max-width:94%;max-height:88vh;border-radius:18px;border:3px solid var(--ink)}
+.phead{display:none}
+@media print{body{background:#fff!important;color:#000}.bl,.mq,nav,.noprint,h1,.view:not(#v-rep),.ov,#cam,.mini,#who{display:none!important}
+ #v-rep{display:block!important}.card{background:#fff!important;border:1px solid #888;box-shadow:none;color:#000;break-inside:avoid;animation:none}
+ .phead{display:block;margin-bottom:10px}.m,.sub{color:#444}.tag{border:1px solid #000;background:#fff!important;color:#000!important;transform:none}main{padding:0;max-width:none}}
+
+#spl{position:fixed;inset:0;z-index:100;display:grid;place-content:center;justify-items:center;background:radial-gradient(circle,rgba(24,24,24,.16) 1.2px,transparent 1.7px) 0 0/15px 15px,var(--bg);cursor:pointer}
+#spl::after{content:"";position:absolute;left:0;right:0;top:100%;height:16vh;background:linear-gradient(var(--c) 0 33%,var(--a) 33% 66%,var(--b) 66%)}
+#spl.out{transform:translateY(-100%);transition:transform .85s cubic-bezier(.76,0,.24,1)}
+.sp-w{display:flex;font:400 min(17vw,78px)/1 'Bagel Fat One','Space Grotesk',Impact,sans-serif;letter-spacing:-1px;text-shadow:3px 3px 0 var(--a)}
+.sp-w span{display:inline-block;overflow:hidden;padding:0 .07em .16em 0}.sp-w i{display:inline-block;font-style:normal;animation:rise .9s cubic-bezier(.2,.9,.2,1) both}
+@keyframes rise{from{transform:translateY(120%) rotate(8deg)}to{transform:none}}
+.sp-u{display:flex;flex-direction:column;gap:5px;width:min(64vw,300px);margin-top:10px}
+.sp-u b{height:6px;border-radius:9px;border:1.5px solid var(--ink);transform:scaleX(0);transform-origin:left;animation:sx .8s cubic-bezier(.2,.9,.2,1) forwards}
+.sp-u b:nth-child(1){background:var(--a);animation-delay:1.05s}.sp-u b:nth-child(2){background:var(--c);animation-delay:1.15s}.sp-u b:nth-child(3){background:var(--d);animation-delay:1.25s}
+@keyframes sx{to{transform:none}}
+.sp-s{margin-top:16px;font:700 12px 'Space Mono';letter-spacing:.35em;opacity:0;animation:fi .7s 1.4s forwards}@keyframes fi{to{opacity:1}}
+.sp-k{position:absolute;font-size:30px;opacity:0;animation:tw 1.8s ease-in-out infinite}@keyframes tw{50%{opacity:1;transform:scale(1.25) rotate(25deg)}}
+@media (prefers-reduced-motion:reduce){#spl{display:none}}
+</style></head><body>
+<div id="spl"><span class="sp-k" style="left:14%;top:26%;color:var(--a);animation-delay:.6s">✦</span><span class="sp-k" style="right:12%;top:34%;color:var(--b);animation-delay:1s">✶</span><span class="sp-k" style="left:22%;bottom:24%;color:var(--d);animation-delay:1.4s">✺</span><span class="sp-k" style="right:20%;bottom:30%;color:var(--c);animation-delay:.2s">✦</span><div class="sp-w" id="spw"></div><div class="sp-u"><b></b><b></b><b></b></div><div class="sp-s">✦ CHECK-IN ✦</div></div>
+<div class="bl b1"></div><div class="bl b2"></div><div class="bl b3"></div>
+<div class="mq noprint"><div id="m1"></div></div><div class="mq b noprint"><div id="m2"></div></div>
+<main>
+<h1>check-in<span class="stk">✶</span></h1><div class="sub" id="who"></div>
+
+<section class="view on" id="v-home">
+ <div class="card"><div class="top"><div><div class="sub" id="hd"></div><div class="clk" id="clk"></div></div><div class="step"><button data-a="hrs" data-d="-1">−</button><div id="hrs"></div><button data-a="hrs" data-d="1">+</button></div></div>
+ <div class="sub" style="margin-top:10px">dilarang cuti kecuali demam</div></div>
+ <div class="btnw"><svg viewBox="0 0 260 260"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--a)"/><stop offset="1" style="stop-color:var(--c)"/></linearGradient></defs><circle class="tk" cx="130" cy="130" r="120"/><g transform="rotate(-90 130 130)"><circle id="r1" class="pr" cx="130" cy="130" r="120" stroke="url(#g)"/><circle id="r2" class="pr o" cx="130" cy="130" r="120"/></g></svg>
+ <button class="big" id="go" data-a="go"></button></div>
+ <div class="stat sub" id="stat"></div>
+ <div style="text-align:center"><button class="ghost" id="sp" data-a="split">☕ pulang split (istirahat)</button></div>
+ <div class="card"><div class="sub">HARI INI</div><div id="today"></div><button class="pbtn alt" data-a="manual">+ lupa absen? input manual</button></div>
+</section>
+
+<section class="view" id="v-rep">
+ <div class="phead"><h2 style="margin:0">LAPORAN KEHADIRAN</h2><div id="pinfo" class="sub"></div></div>
+ <div class="noprint card"><label style="margin-top:0">Bulan</label><input type="month" id="mon"><button class="pbtn" data-a="pdf">📄 Unduh PDF</button><button class="pbtn alt" data-a="print">🖨 Cetak lewat browser</button><button class="pbtn alt" data-a="xlsx">📊 Unduh Excel (.xlsx)</button><button class="pbtn alt" data-a="copy">⧉ Salin laporan (teks)</button><div class="sub">PDF dibuat langsung di halaman, tanpa dialog cetak. Foto dan lokasi masuk di lampiran.</div></div>
+ <div id="sum"></div><div id="rep"></div>
+</section>
+
+<section class="view" id="v-set">
+ <div class="card"><h3>Profil</h3><label>Nama</label><input data-c="name" id="nm" placeholder="Nama kamu">
+ <label>Lembur dihitung mulai (menit di atas jam normal)</label><input type="number" data-c="otMin" id="otm" min="0">
+ <label>Foto saat absen</label><select data-c="photo" id="ph"><option value="1">Tawarkan foto setelah absen</option><option value="0">Tanpa foto</option></select>
+ <label>Warna</label><div class="chips" id="ths"></div></div>
+ <div class="card sub">Tidak ada jadwal: masuk dan pulang dicatat sesuai kapan kamu absen. Jam kerja normal diatur di halaman Absen. Data tersimpan di perangkat ini saja.</div>
+ <button class="pbtn alt" data-a="wipe">Hapus semua data</button>
+</section>
+</main>
+<nav><button class="on" data-a="tab" data-v="home">Absen</button><button data-a="tab" data-v="rep">Laporan</button><button data-a="tab" data-v="set">Atur</button></nav>
+<div class="ov" id="ov"><div class="sheet" id="sb"></div></div>
+<div class="ov" id="lb" data-a="lbx"><img id="lbi" alt=""></div>
+<div class="toast" id="toast"></div><div id="fx"></div><input type="file" id="file" accept="image/*" capture="user" hidden>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),P=n=>String(n).padStart(2,'0'),uid=()=>Math.random().toString(36).slice(2,8);
+const DK=d=>d.getFullYear()+'-'+P(d.getMonth()+1)+'-'+P(d.getDate()),HM=t=>{const d=new Date(t);return P(d.getHours())+':'+P(d.getMinutes())};
+const M=t=>{const[a,b]=t.split(':');return+a*60+ +b},E=s=>String(s??'').replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';');
+const D=m=>{m=Math.round(m);return Math.floor(m/60)+'j '+P(m%60)+'m'},fh=h=>String(h).replace('.',',')+' jam',C=754;
+let S={cfg:{name:'',hrs:8,otMin:15,photo:true,theme:'pop'},logs:[]};
+try{const r=localStorage.getItem('checkin.v3');if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+if(!['pop','tropis','bubble','ocean'].includes(S.cfg.theme))S.cfg.theme='pop';
+const save=()=>{try{localStorage.setItem('checkin.v3',JSON.stringify(S));return true}catch(e){flash('STORAGE\nPENUH');return false}};
+const byTs=(a,b)=>a.ts-b.ts;
+// sesi = rangkaian absen dari MASUK sampai PULANG akhir; lewat tengah malam tetap satu sesi
+function cur(){const l=[...S.logs].sort((a,b)=>b.ts-a.ts)[0];if(!l||l.t==='out'||Date.now()-l.ts>20*36e5)return null;return{sid:l.sid,st:l.t==='in'?'in':'brk',ls:S.logs.filter(x=>x.sid===l.sid).sort(byTs)}}
+function sess(){const m={};S.logs.forEach(l=>(m[l.sid]=m[l.sid]||[]).push(l));return Object.values(m).map(a=>a.sort(byTs)).sort((a,b)=>b[0].ts-a[0].ts)}
+function worked(ls,now){let m=0,o=null;ls.forEach(l=>{if(l.t==='in'){if(o==null)o=l.ts}else if(o!=null){m+=l.ts-o;o=null}});if(o!=null&&now)m+=Math.max(0,now-o);return Math.round(m/6e4)}
+// jam normal disalin ke log (nm): mengubah jam normal nanti tidak mengubah riwayat lama
+function info(ls){const z=ls[ls.length-1],cl=z.t==='out',w=worked(ls,0),nm=z.nm||S.cfg.hrs*60,ex=Math.round(w-nm);return{w,cl,ot:cl&&ex>0&&ex>=S.cfg.otMin?ex:0,lo:cl&&ex<0?-ex:0}}
+function stags(ls){const i=info(ls),t=[['ok2','KERJA '+D(i.w)]];if(i.cl)t.push(i.ot?['ot','LEMBUR '+D(i.ot)]:i.lo?['lo','KURANG '+D(i.lo)]:['ok2','JAM PAS']);else t.push(['gr','BELUM PULANG']);return t}
+const tg=t=>t.map(x=>`<span class="tag ${x[0]}">${x[1]}</span>`).join('');
+const lbl=(l,ls)=>l.t==='in'?(ls.find(x=>x.t==='in')===l?'MASUK':'MASUK LAGI'):l.t==='split'?'PULANG SPLIT':'PULANG';
+function ents(ls){return ls.map(l=>{const t=[];if(l.man)t.push('MANUAL');if(l.ed)t.push('DIEDIT');if(l.lat==null&&!l.man)t.push('TANPA LOKASI');
+ return `<div class="ent">${l.photo?`<img src="${l.photo}" alt="" data-a="photo" data-id="${l.id}">`:'<div class="ph">✶</div>'}<div><b>${lbl(l,ls)} ${HM(l.ts)}</b><br>${t.map(x=>`<span class="tag gr">${x}</span>`).join('')}<div class="m">${l.lat==null?'lokasi: -':l.lat.toFixed(5)+', '+l.lng.toFixed(5)+' (±'+Math.round(l.acc)+' m)'}${l.note?' • '+E(l.note):''}</div></div><button class="mini noprint" data-a="edit" data-id="${l.id}">edit</button></div>`}).join('')}
+
+function home(){const c=cur(),n=Date.now(),N=S.cfg.hrs*60,td=DK(new Date()),w=c?worked(c.ls,n):0,ex=w-N;
+ $('#hd').textContent=new Date().toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long'});$('#clk').textContent=HM(n);$('#hrs').textContent=fh(S.cfg.hrs);
+ $('#go').innerHTML=(!c?'MASUK':c.st==='brk'?'MASUK<br>LAGI':'PULANG')+`<small>ketuk • ${S.cfg.photo?'foto + ':''}lokasi</small>`;
+ $('#sp').style.display=c&&c.st==='in'?'inline-flex':'none';
+ const p=Math.min(w/N,1),o=Math.min(Math.max(ex,0)/N,1);$('#r1').style.strokeDashoffset=C*(1-p);$('#r1').style.opacity=p>0?1:0;$('#r2').style.strokeDashoffset=C*(1-o);$('#r2').style.opacity=o>0?1:0;
+ $('#stat').innerHTML=!c?'siap kerja? ketuk MASUK':c.st==='brk'?`istirahat • sudah kerja ${D(w)} dari ${fh(S.cfg.hrs)}`:ex>=S.cfg.otMin?`<b>LEMBUR +${D(ex)}</b> • total ${D(w)}`:`bekerja ${D(w)} • ${ex<0?'sisa '+D(-ex)+' menuju lembur':'hampir lembur'}`;
+ const ts=sess().filter(s=>DK(new Date(s[0].ts))===td);
+ $('#today').innerHTML=ts.length?ts.map(s=>`<div class="sess">${tg(stags(s))}${ents(s)}</div>`).join(''):'<div class="sub" style="padding:10px 0">belum ada absen hari ini</div>'}
+
+function grp(){const mo=$('#mon').value;return{mo,ss:sess().filter(s=>DK(new Date(s[0].ts)).startsWith(mo))}}
+function rep(){const{mo,ss}=grp();let w=0,ot=0,lo=0;const dy=new Set();ss.forEach(s=>{const i=info(s);w+=i.w;ot+=i.ot;lo+=i.lo;dy.add(DK(new Date(s[0].ts)))});
+ $('#pinfo').textContent=`${S.cfg.name||'-'} • ${mo} • jam normal ${fh(S.cfg.hrs)}`;
+ $('#sum').innerHTML=`<div class="card">${tg([['ok2',dy.size+' HARI'],['ok2','KERJA '+D(w)],['ot','LEMBUR '+D(ot)],['lo','KURANG '+D(lo)]])}</div>`;
+ $('#rep').innerHTML=ss.map(s=>`<div class="card"><b style="font-family:'Space Mono'">${new Date(s[0].ts).toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</b><div>${tg(stags(s))}</div>${ents(s)}</div>`).join('')||'<div class="card sub">belum ada data bulan ini</div>'}
+function txt(){const{mo,ss}=grp();let o=`LAPORAN KEHADIRAN\n${S.cfg.name||'-'} • ${mo} • jam normal ${fh(S.cfg.hrs)}`;ss.forEach(s=>{o+=`\n\n${DK(new Date(s[0].ts))} [${stags(s).map(t=>t[1]).join(', ')}]\n`+s.map(l=>` ${lbl(l,s)} ${HM(l.ts)}${l.lat==null?'':' '+l.lat.toFixed(5)+','+l.lng.toFixed(5)}`).join('\n')});return o}
+function renderSet(){const c=S.cfg;$('#nm').value=c.name;$('#otm').value=c.otMin;$('#ph').value=c.photo?'1':'0';
+ $('#ths').innerHTML=[['pop','#ff5fa2,#3d6bff'],['tropis','#ff7a45,#00a6a6'],['bubble','#8a5cff,#ff4f9a'],['ocean','#2f6bff,#ff8a3d']].map(t=>`<button class="th ${c.theme===t[0]?'on':''}" style="background:linear-gradient(135deg,${t[1]})" data-a="theme" data-t="${t[0]}" aria-label="${t[0]}"></button>`).join('')}
+function R(){document.documentElement.dataset.t=S.cfg.theme;$('#who').textContent=(S.cfg.name?S.cfg.name.toLowerCase()+' • ':'')+'datang & pulang, tercatat rapi';home();rep();renderSet()}
+
+function flash(t){const e=$('#toast');e.textContent=t;e.classList.remove('go');void e.offsetWidth;e.classList.add('go');if(navigator.vibrate)navigator.vibrate(40)}
+function boom(){const f=$('#fx');for(let i=0;i<20;i++){const s=document.createElement('i');s.textContent='✦✧·✶'[i%4];s.style.cssText=`--x:${(Math.random()-.5)*360}px;--y:${-100-Math.random()*280}px;--r:${Math.random()*540}deg;left:50%;top:62%;color:var(${['--a','--b','--c'][i%3]})`;f.append(s);setTimeout(()=>s.remove(),1300)}}
+const open=()=>$('#ov').classList.add('on'),close=()=>$('#ov').classList.remove('on');
+function tab(v){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));scrollTo(0,0)}
+
+// absen DICATAT SEKETIKA saat tombol diketuk; foto bukti ditempel sesudahnya,
+// jadi kamera yang diblokir browser tidak pernah bisa menghalangi absen
+let shotId=null,lastTap=0;
+function act(t){if(Date.now()-lastTap<2500)return;lastTap=Date.now();
+ const c=cur(),ts=Date.now(),sid=c?c.sid:'S'+ts,l={id:uid(),sid,t,ts,nm:S.cfg.hrs*60,lat:null,lng:null,acc:0,photo:null,note:''};
+ S.logs.push(l);if(!save()){S.logs.pop();return}
+ boom();const ls=S.logs.filter(x=>x.sid===sid).sort(byTs);
+ if(t==='out'){const i=info(ls);flash('PULANG ✦\n'+(i.ot?'LEMBUR '+D(i.ot):i.lo?'KURANG '+D(i.lo):'KERJA '+D(i.w)))}else flash(lbl(l,ls)+'\n✦ '+HM(ts)+' ✦');
+ R();
+ if(navigator.geolocation)navigator.geolocation.getCurrentPosition(g=>{l.lat=g.coords.latitude;l.lng=g.coords.longitude;l.acc=g.coords.accuracy;save();R()},()=>{},{enableHighAccuracy:true,timeout:15000,maximumAge:0});
+ if(S.cfg.photo)setTimeout(()=>askShot(l.id),1100)}
+function askShot(id){const l=S.logs.find(x=>x.id===id);if(!l||l.photo)return;$('#sb').innerHTML=`<h3>Tercatat ✦ ${HM(l.ts)}</h3><div class="sub">Absen sudah tersimpan. Tambahkan foto bukti? Boleh dilewati.</div><button class="pbtn" data-a="shot" data-id="${id}">📷 Ambil foto</button><button class="pbtn alt" data-a="close">Lewati</button>`;open()}
+$('#file').onchange=e=>{const f=e.target.files[0],id=shotId;e.target.value='';if(!f||!id)return;const l=S.logs.find(x=>x.id===id);if(!l)return;const im=new Image();
+ im.onload=()=>{const W=420,H=Math.round(im.naturalHeight*W/im.naturalWidth),c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');x.drawImage(im,0,0,W,H);
+  const ls=S.logs.filter(y=>y.sid===l.sid).sort(byTs),d=new Date(l.ts);x.fillStyle='rgba(0,0,0,.62)';x.fillRect(0,H-46,W,46);x.font='bold 13px monospace';x.fillStyle='#ffe14d';
+  x.fillText(`${lbl(l,ls)} ${P(d.getDate())}/${P(d.getMonth()+1)}/${d.getFullYear()} ${HM(l.ts)}`,8,H-28);x.fillStyle='#fff';x.fillText(l.lat==null?'LOKASI TIDAK ADA':l.lat.toFixed(5)+', '+l.lng.toFixed(5),8,H-10);
+  l.photo=c.toDataURL('image/jpeg',.6);shotId=null;if(save()){close();R();flash('FOTO\nTERSIMPAN ✦')}else l.photo=null};
+ im.onerror=()=>flash('FOTO\nGAGAL DIBACA');im.src=URL.createObjectURL(f)};
+const sure=a=>{if(a.dataset.c!=='1'){a.dataset.c='1';a.textContent='YAKIN? KETUK LAGI';return false}return true};
+
+async function exportXlsx(){
+ if(typeof XLSX==='undefined')return flash('EXCEL\nBELUM SIAP');
+ const{mo,ss}=grp(),asc=ss.slice().reverse(),H=['Tanggal','Hari','Masuk','Rincian split','Pulang','Total kerja (jam)','Jam normal','Lembur (menit)','Kurang (menit)','Status','Lokasi masuk','Peta','Catatan'];
+ const a=[['LAPORAN KEHADIRAN - check-in'],['Nama',S.cfg.name||'-'],['Periode',mo],['Jam kerja normal',S.cfg.hrs+' jam'],[],H];let tw=0,to=0,tl=0;
+ asc.forEach(x=>{const f=x.find(l=>l.t==='in'),z=x[x.length-1],i=info(x),d=new Date(x[0].ts),sp=[];let br=null;
+  x.forEach(l=>{if(l.t==='split')br=l.ts;else if(l.t==='in'&&br!=null){sp.push(HM(br)+' > '+HM(l.ts));br=null}});if(br!=null)sp.push(HM(br)+' > ...');
+  const w=+(i.w/60).toFixed(2);tw+=w;to+=i.ot;tl+=i.lo;
+  a.push([DK(d),d.toLocaleDateString('id-ID',{weekday:'long'}),f?HM(f.ts):'',sp.join('; '),i.cl?HM(z.ts):'',w,(z.nm||S.cfg.hrs*60)/60,i.ot,i.lo,i.cl?(i.ot?'Lembur':i.lo?'Kurang':'Pas'):'Belum pulang',f&&f.lat!=null?f.lat.toFixed(5)+', '+f.lng.toFixed(5):'',f&&f.lat!=null?{t:'s',v:'Buka peta',l:{Target:'https://www.google.com/maps?q='+f.lat+','+f.lng}}:'',x.map(l=>l.note).filter(Boolean).join('; ')])});
+ const n=asc.length,r1=7,r2=6+n;a.push(['TOTAL','','','','',{t:'n',v:+tw.toFixed(2),f:'SUM(F'+r1+':F'+r2+')'},'',{t:'n',v:to,f:'SUM(H'+r1+':H'+r2+')'},{t:'n',v:tl,f:'SUM(I'+r1+':I'+r2+')'}]);
+ const w1=XLSX.utils.aoa_to_sheet(a);w1['!cols']=[12,11,8,24,8,16,11,14,14,13,22,12,28].map(x=>({wch:x}));
+ const w2=XLSX.utils.aoa_to_sheet([['Ringkasan '+mo],['Nama',S.cfg.name||'-'],['Jam kerja normal (jam)',S.cfg.hrs],['Jumlah hari',new Set(asc.map(x=>DK(new Date(x[0].ts)))).size],['Total kerja (jam)',+tw.toFixed(2)],['Total lembur (jam)',+(to/60).toFixed(2)],['Total kurang (jam)',+(tl/60).toFixed(2)]]);w2['!cols']=[{wch:26},{wch:18}];
+ const lg=[['Tanggal','Jam','Jenis','Latitude','Longitude','Akurasi (m)','Foto','Catatan','Manual']];asc.forEach(x=>x.forEach(l=>lg.push([DK(new Date(l.ts)),HM(l.ts),lbl(l,x),l.lat==null?'':+l.lat.toFixed(6),l.lng==null?'':+l.lng.toFixed(6),Math.round(l.acc)||'',l.photo?'Ya':'Tidak',l.note||'',l.man?'Ya':''])));
+ const w3=XLSX.utils.aoa_to_sheet(lg);w3['!cols']=[12,8,15,12,12,12,8,26,8].map(x=>({wch:x}));
+ const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,w1,'Rincian');XLSX.utils.book_append_sheet(wb,w2,'Ringkasan');XLSX.utils.book_append_sheet(wb,w3,'Log absen');
+ const buf=XLSX.write(wb,{bookType:'xlsx',type:'array'}),name='check-in_'+(S.cfg.name||'laporan').replace(/[^\w-]+/g,'_')+'_'+mo+'.xlsx';
+ return saveBuf(name,buf,'EXCEL')}
+async function saveBuf(name,buf,tag){try{const dl=typeof claude!=='undefined'?await claude.use('downloads'):null;if(dl){await dl.save({filename:name,data:buf});flash(tag+'\nTERSIMPAN ✦');return}}catch(e){if(e&&e.code==='declined')return}
+ try{const k=document.createElement('a');k.href=URL.createObjectURL(new Blob([buf]));k.download=name;document.body.append(k);k.click();k.remove();flash(tag+'\nDIUNDUH ✦')}catch(e){flash('GAGAL\nUNDUH')}}
+const hx=v=>{v=v.trim().replace('#','');return[0,2,4].map(i=>parseInt(v.substr(i,2),16))},tint=c=>c.map(v=>Math.round(v+(255-v)*.6));
+// PDF dibuat langsung di halaman (tanpa dialog cetak browser) supaya hasilnya sama di semua perangkat
+async function exportPdf(){
+ const J=window.jspdf&&window.jspdf.jsPDF;if(!J)return flash('PDF\nBELUM SIAP');
+ const{mo,ss}=grp(),asc=ss.slice().reverse(),cs=getComputedStyle(document.documentElement),[ca,cb,cc,cd]=['--a','--b','--c','--d'].map(k=>hx(cs.getPropertyValue(k))),ink=[24,24,24],mu=[107,99,84];
+ const doc=new J({unit:'mm',format:'a4'}),W=210,m=14;
+ [ca,cc,cd,cb].forEach((c,i)=>{doc.setFillColor(...c);doc.rect(i*W/4,0,W/4,5,'F')});
+ doc.setTextColor(...ink);doc.setFont('helvetica','bold');doc.setFontSize(22);doc.text('LAPORAN KEHADIRAN',m,24);
+ doc.setFont('helvetica','normal');doc.setFontSize(10);doc.setTextColor(...mu);doc.text(`${S.cfg.name||'-'}   |   Periode ${mo}   |   Jam kerja normal ${fh(S.cfg.hrs)}`,m,31);
+ doc.setDrawColor(...ink);doc.setLineWidth(.5);doc.line(m,35,W-m,35);
+ let tw=0,to=0,tl=0;const dy=new Set();asc.forEach(x=>{const i=info(x);tw+=i.w;to+=i.ot;tl+=i.lo;dy.add(DK(new Date(x[0].ts)))});
+ [['HARI KERJA',dy.size+' hari',cc],['TOTAL KERJA',D(tw),ca],['LEMBUR',D(to),cd],['KURANG',D(tl),cb]].forEach((c,i)=>{const w=(W-2*m-9)/4,x=m+i*(w+3);doc.setFillColor(...tint(c[2]));doc.setLineWidth(.4);doc.roundedRect(x,40,w,20,3,3,'FD');doc.setTextColor(...mu);doc.setFont('helvetica','normal');doc.setFontSize(7.5);doc.text(c[0],x+4,47);doc.setTextColor(...ink);doc.setFont('helvetica','bold');doc.setFontSize(13);doc.text(c[1],x+4,55)});
+ const rows=asc.map(x=>{const f=x.find(l=>l.t==='in'),z=x[x.length-1],i=info(x),sp=[];let br=null;x.forEach(l=>{if(l.t==='split')br=l.ts;else if(l.t==='in'&&br!=null){sp.push(HM(br)+'-'+HM(l.ts));br=null}});
+  return[new Date(x[0].ts).toLocaleDateString('id-ID',{weekday:'short',day:'2-digit',month:'short'}),f?HM(f.ts):'-',sp.join(', ')||'-',i.cl?HM(z.ts):'-',D(i.w),i.ot?'+'+D(i.ot):i.lo?'-'+D(i.lo):'-',i.cl?(i.ot?'Lembur':i.lo?'Kurang':'Pas'):'Belum pulang']});
+ doc.autoTable({startY:66,head:[['Tanggal','Masuk','Split','Pulang','Total kerja','Selisih','Status']],body:rows.length?rows:[['Belum ada data','','','','','','']],margin:{left:m,right:m,bottom:18},styles:{font:'helvetica',fontSize:9,cellPadding:2.4,lineColor:[220,212,196],lineWidth:.2,textColor:ink},headStyles:{fillColor:ink,textColor:255,fontStyle:'bold'},alternateRowStyles:{fillColor:[252,248,238]},
+  didParseCell:d=>{if(d.section==='body'&&d.column.index===6){const t=d.cell.raw;d.cell.styles.fontStyle='bold';d.cell.styles.textColor=t==='Lembur'?[20,90,200]:t==='Kurang'?[200,60,40]:t==='Pas'?[30,130,70]:[120,110,95]}}});
+ let y=doc.lastAutoTable.finalY+18;if(y>245){doc.addPage();y=34}
+ [['Karyawan',S.cfg.name||'-'],['Atasan / Pimpinan','']].forEach((q,i)=>{const x=m+i*((W-2*m)/2);doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(...mu);doc.text(q[0],x,y);doc.setDrawColor(...ink);doc.setLineWidth(.3);doc.line(x,y+24,x+62,y+24);doc.setTextColor(...ink);doc.setFont('helvetica','bold');doc.text(q[1],x,y+29)});
+ const ph=[];asc.forEach(x=>x.forEach(l=>{if(l.photo)ph.push([l,x])}));
+ if(ph.length){doc.addPage();let py=28;doc.setFont('helvetica','bold');doc.setFontSize(15);doc.setTextColor(...ink);doc.text('LAMPIRAN FOTO & LOKASI',m,py);py+=8;
+  const bw=(W-2*m-8)/3,bh=62,rh=bh+14;
+  ph.forEach(([l,x],i)=>{const c=i%3;if(c===0&&i>0)py+=rh;if(c===0&&py+rh>284){doc.addPage();py=28}const px=m+c*(bw+4);
+   doc.setFillColor(250,246,236);doc.setDrawColor(...ink);doc.setLineWidth(.3);doc.roundedRect(px,py,bw,bh,2,2,'FD');
+   try{const ip=doc.getImageProperties(l.photo),k=Math.min((bw-2)/ip.width,(bh-2)/ip.height),iw=ip.width*k,ih=ip.height*k;doc.addImage(l.photo,'JPEG',px+(bw-iw)/2,py+(bh-ih)/2,iw,ih)}catch(e){}
+   doc.setFont('helvetica','bold');doc.setFontSize(8.5);doc.setTextColor(...ink);doc.text(`${lbl(l,x)} ${HM(l.ts)}`,px,py+bh+5);
+   doc.setFont('helvetica','normal');doc.setFontSize(7);doc.setTextColor(...mu);doc.text(DK(new Date(l.ts))+(l.lat==null?'  |  lokasi: -':'  |  '+l.lat.toFixed(5)+', '+l.lng.toFixed(5)),px,py+bh+9.5)})}
+ const n=doc.getNumberOfPages();for(let i=1;i<=n;i++){doc.setPage(i);doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(...mu);doc.text(`check-in   |   ${S.cfg.name||'-'}   |   ${mo}`,m,290);doc.text(`Halaman ${i} / ${n}`,W-m,290,{align:'right'})}
+ return saveBuf('check-in_'+(S.cfg.name||'laporan').replace(/[^\w-]+/g,'_')+'_'+mo+'.pdf',doc.output('arraybuffer'),'PDF')}
+const A={pdf:()=>exportPdf(),xlsx:()=>exportXlsx(),
+ tab:d=>{tab(d.v);if(d.v==='rep')rep()},
+ theme:d=>{S.cfg.theme=d.t;save();R()},
+ hrs:d=>{S.cfg.hrs=Math.min(16,Math.max(1,Math.round((S.cfg.hrs+ +d.d*.5)*2)/2));save();R()},
+ go:()=>{const c=cur();act(!c||c.st==='brk'?'in':'out')},split:()=>act('split'),
+ shot:d=>{shotId=d.id;$('#file').click()},
+ photo:d=>{const l=S.logs.find(x=>x.id===d.id);if(l){$('#lbi').src=l.photo;$('#lb').classList.add('on')}},lbx:()=>$('#lb').classList.remove('on'),close,
+ edit:d=>{const l=S.logs.find(x=>x.id===d.id);if(!l)return;$('#sb').innerHTML=`<h3>${lbl(l,S.logs.filter(x=>x.sid===l.sid).sort(byTs))}</h3>${l.photo?`<img class="pv" src="${l.photo}" data-a="photo" data-id="${l.id}">`:''}<button class="pbtn alt" data-a="shot" data-id="${l.id}">📷 ${l.photo?'Ganti':'Tambah'} foto</button><label>Jam</label><input type="time" id="etime" value="${HM(l.ts)}"><label>Catatan</label><input id="enote" value="${E(l.note)}" placeholder="opsional"><button class="pbtn" data-a="esave" data-id="${l.id}">Simpan</button><button class="pbtn alt" data-a="edel" data-id="${l.id}">Hapus absen ini</button><button class="pbtn alt" data-a="close">Tutup</button>`;open()},
+ esave:d=>{const l=S.logs.find(x=>x.id===d.id),t=$('#etime').value;if(!l||!t)return;const x=new Date(l.ts);x.setHours(+t.split(':')[0],+t.split(':')[1],0,0);l.ts=+x;l.ed=1;l.note=$('#enote').value.trim();save();close();R();flash('TERSIMPAN ✦')},
+ edel:(d,a)=>{if(!sure(a))return;S.logs=S.logs.filter(x=>x.id!==d.id);save();close();R()},
+ manual:()=>{$('#sb').innerHTML=`<h3>Absen manual</h3><label>Tanggal masuk kerja</label><input type="date" id="mdate" value="${DK(new Date())}"><label>Jenis</label><select id="mt"><option value="in">Masuk / masuk lagi</option><option value="split">Pulang split</option><option value="out">Pulang</option></select><label>Jam</label><input type="time" id="mtime" value="${HM(Date.now())}"><label>Catatan</label><input id="mnote" placeholder="alasan lupa absen"><button class="pbtn" data-a="msave">Simpan</button><button class="pbtn alt" data-a="close">Tutup</button>`;open()},
+ msave:()=>{const dt=$('#mdate').value,t=$('#mt').value,tm=$('#mtime').value;if(!dt||!tm)return;const ss=sess().filter(s=>DK(new Date(s[0].ts))===dt),s0=ss[0];let ts=new Date(dt+'T00:00').getTime()+M(tm)*6e4,sid;
+  if(t==='in')sid=s0&&s0[s0.length-1].t!=='out'?s0[0].sid:'S'+ts;else{if(!s0)return flash('BELUM ADA\nMASUK');sid=s0[0].sid;if(ts<s0[s0.length-1].ts)ts+=864e5}
+  S.logs.push({id:uid(),sid,t,ts,nm:S.cfg.hrs*60,lat:null,lng:null,acc:0,photo:null,note:$('#mnote').value.trim(),man:1});save();close();R();flash('MANUAL\nTERSIMPAN')},
+ print:()=>{tab('rep');rep();try{window.print()}catch(e){A.copy()}},
+ copy:async()=>{const t=txt();try{await navigator.clipboard.writeText(t);flash('LAPORAN\nTERSALIN')}catch(e){const a=document.createElement('textarea');a.value=t;document.body.append(a);a.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}a.remove();flash(ok?'LAPORAN\nTERSALIN':'GAGAL\nSALIN')}},
+ wipe:(d,a)=>{if(!sure(a))return;S.logs=[];save();R();flash('DATA\nDIHAPUS')}
+};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(a&&A[a.dataset.a]){e.preventDefault();A[a.dataset.a](a.dataset,a)}});
+$('#ov').addEventListener('click',e=>{if(e.target.id==='ov')close()});
+document.addEventListener('change',e=>{const t=e.target,c=t.dataset.c;
+ if(c){S.cfg[c]=c==='photo'?t.value==='1':c==='name'||c==='cam'?t.value.trim():Math.max(0,+t.value||0);save();R();flash('TERSIMPAN ✦')}else if(t.id==='mon')rep()});
+const n=new Date();$('#mon').value=n.getFullYear()+'-'+P(n.getMonth()+1);
+$('#m1').textContent='semangatlah seperti saat kamu berangkat bekerja pada hari pertama ✦ '.repeat(8);
+$('#m2').textContent='semua hanya tentang waktu, jangan berubah dan jangan menyerah ★ '.repeat(8);
+setInterval(()=>{if(!$('#ov').classList.contains('on'))home()},20000);R();
+(function(){const sp=$('#spl');if(!sp)return;$('#spw').innerHTML=[...'semangat'].map((c,i)=>`<span><i style="animation-delay:${.25+i*.07}s">${c}</i></span>`).join('');
+ const out=()=>{if(sp.classList.contains('out'))return;sp.classList.add('out');setTimeout(()=>sp.remove(),900)};sp.onclick=out;setTimeout(out,2400)})();
+</script><script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>
+</body></html>
